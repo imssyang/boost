@@ -4,5 +4,5 @@ apt-get install libbz2-dev
 
 ./bootstrap.sh --prefix=/opt/boost
 ./b2 --show-libraries
-./b2 --prefix=/opt/boost
+./b2 --prefix=/opt/boost --build-type=complete --layout=versioned
 ./b2 install
