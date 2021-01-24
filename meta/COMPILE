@@ -1,8 +1,17 @@
 
+# 默认
 apt-get install libbz2-dev
-
 
 ./bootstrap.sh --prefix=/opt/boost
 ./b2 --show-libraries
 ./b2 --prefix=/opt/boost --build-type=complete --layout=versioned
 ./b2 install
+
+# 编译v1.75.0
+mkdir /opt/boost/v1_75_0
+./bootstrap.sh --prefix=/opt/boost/v1_75_0
+./b2 --prefix=/opt/boost/v1_75_0 --build-type=complete --layout=versioned
+./b2 install
+
+
+
